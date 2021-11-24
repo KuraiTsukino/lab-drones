@@ -5,7 +5,7 @@ const Drone = require("./../models/Drone")
 
 // 2. Conexión a base de datos.
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(`mongodb+srv://$process.env.${DB_USERNAME}:${DB_PASSWORD}@cluster0.hptoy.mongodb.net/ih-drones`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
