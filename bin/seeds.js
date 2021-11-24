@@ -3,9 +3,11 @@
 const mongoose = require("mongoose")
 const Drone = require("./../models/Drone")
 
+require("dotenv").config()
+
 // 2. Conexión a base de datos.
 
-mongoose.connect(`mongodb+srv://$process.env.${DB_USERNAME}:${DB_PASSWORD}@cluster0.hptoy.mongodb.net/ih-drones`, {
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.hptoy.mongodb.net/ih-drones`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
